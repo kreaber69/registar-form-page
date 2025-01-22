@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block css %}
+<link href="{{ url_for('static', filename='login.css') }}" rel="stylesheet"> 
+{% endblock %}
+{% block body %}
+<body>
+    <div class="div-3">
+        <p class="p1">deer.com</p>
+        <p class="p2">the ultimate saver of deers live</p>
+    </div>
+    <div>
+        <form >
+            <p class="head">name</p>
+            <p class="head">email</p>
+            <p class="head" id="h">submit</p>
+        </form>
+
+    {% for i in range( 0 , key) %}
+    <form action="/login/sent" method="post">
+        <p >{{ list2[i]["name"] }}</p>
+        <p>{{ list2[i]["mail"] }}</p>
+        <input type="hidden" name="name" value="{{  list2[i]['id']  }}">
+        <button>choose</button>
+    </form>
+    {% endfor %}
+    </div>
+</body>
+{% endblock %}

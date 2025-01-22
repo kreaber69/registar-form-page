@@ -1,0 +1,20 @@
+p{
+    font-size: 18px;
+    font-weight: bold;
+}
+spin{
+    color: red;
+
+}
+h1{
+    font-size: 40px;
+    font-weight: bolder;
+}
+@media (max-width: 760px){
+    p{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 30px;
+    }
+}

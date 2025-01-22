@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block css %}
+<link href="{{ url_for('static', filename='fallure.css') }}" rel="stylesheet"> 
+{% endblock %}
+{% block body %}
+<body>
+    <h1>
+        something went wrong
+    </h1>
+    <p>please make sure that you enterd informations <spin>correctly</spin></p>
+</body>
+
+{% endblock %}

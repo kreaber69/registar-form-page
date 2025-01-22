@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block css %}<link href="{{ url_for('static', filename='verifiction.css') }}" rel="stylesheet"> {% endblock %}
+
+{% block body %}
+<body>
+
+    <div class="div-3">
+        <p class="p1">deer.com</p>
+        <p>the ultimate saver of deers live</p>
+    </div>
+
+    <form action="/validate" method="post">
+        <div  id="img">
+            <img src="{{ url_for('static', filename='dear.png') }}">
+         </div>
+        <input name="otp" placeholder="please enter the code in your email" >
+        <button type="submit" name="button" value="clicked">submit</button>
+    </form>
+</body>
+{% endblock %}

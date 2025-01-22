@@ -1,0 +1,140 @@
+form{
+   
+    border: 8px solid rgb(69 , 19, 25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 22%;
+    height: 55%;
+    border-radius: 20px;
+   box-shadow: 6px 4px  13px 10px rgb(102, 101, 101);
+}
+input{
+    margin-top: 4%;
+    width: 90%;
+    height: 10%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(69 , 19, 25);
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(204 , 129 , 72);
+    margin-bottom: 10%;
+
+}
+input::placeholder{
+    color: rgb(232 , 203 , 161);
+    font-weight: bold;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+img{
+    width: 28%;
+    height: 100%;
+}
+#img{
+    width: 100%;
+    display: flex;
+    height: 17vh;
+    justify-content: center;
+    padding-bottom: 20%;
+  
+    
+}
+button{
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(69 , 19, 25);
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 3%;
+    width: 60%;
+    border: 3px solid white;
+    transition: 600ms ease;
+    cursor: pointer;
+}
+button:hover{
+    color: rgb(204 , 129 , 72);
+    background-color: white;
+    border: 3px solid rgb(69 , 19, 25);
+    
+}
+.div-3{
+    position: relative;
+    bottom: 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10%;
+}
+p{
+    font-size: 20px;
+    margin: 0%;
+    font-weight: bold;
+    color: rgb(232 , 203 , 161)
+}
+.p1{
+    font-size: 80px;
+    color:rgb(204 , 129 , 72);
+    font-weight: bold;
+}
+@media (max-width: 760px) {
+    form{
+        width:70%;
+    }
+    .div-3{
+        bottom:8%;
+    }
+    p{
+        font-size:16px;
+    }
+    .p1{
+        font-size: 70px;
+    }
+    input{
+        font-size: 13px;
+    }
+    button{
+        font-size: 20px;
+    }
+    .massage{
+        font-size: 15px;
+    }
+
+}
+@media (min-width: 760px) and (max-width : 1024px) {
+    form{
+        width:60%;
+    }
+    .div-3{
+        bottom:8%;
+    }
+    p{
+        font-size:25px;
+    }
+    .p1{
+        font-size: 90px;
+    }
+    input{
+        font-size: 22px;
+    }
+    button{
+        font-size: 32px;
+    }
+    .massage{
+        font-size: 25px;
+    }
+    .form{
+        grid-template-rows: 20px 70px;
+    }
+
+}

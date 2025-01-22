@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block css %}
+<link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet"> 
+{% endblock %}
+
+{% block body %}
+<body id ="8">
+<div class="div-3">
+    <p class="p1">deer.com</p>
+    <p >the ultimate saver of deers live</p>
+</div>
+
+<form action="/verify" method="post" id="1">
+    <div  id="img">
+       <img src="{{ url_for('static', filename='dear.png') }}">
+    </div>
+    <input   placeholder='{{ message if message else 'name' }}' 
+    autocomplete="off" 
+    name = "name1" 
+    type="text" 
+    id="inp1" 
+    onkeyup="move(event, 'inp2' , 'inp1' , 'form-1')" 
+    required onblur="focout('form-1')" 
+    onfocus="focin('form-1','inp1')">
+    <div class="form" id="form-1">
+      <div class="point"></div>
+      <div class="massage">this field is required</div>
+    </div>    
+    <input placeholder="e-mail"    autocomplete="off" name = "mail1" type="text" id="inp2" onkeyup="move(event, 'inp3' , 'inp2' ,'form-2' )" onblur="focout('form-2')" onfocus="focin('form-2' , 'inp2')" >
+    <div class="form" id="form-2">
+      <div class="point"></div>
+      <div class="massage">only @gmail.com is allowed</div>
+    </div>    
+    <input placeholder="password"  autocomplete="off" name = "passw1" type="text" id="inp3" onkeyup="move(event, 'inp1' , 'inp3' ,'form-3')" onblur="focout('form-3')" onfocus="focin('form-3','inp3')"  >
+    <div class="form" id="form-3">
+      <div class="point"></div>
+      <div class="massage" id="m"> must be 8 character length ,1 special character ,1 uppercase character</div>
+    </div>    
+    <div class="div-1">
+      <a href="/login" class="a2">login here</a>
+    </div>
+    <button type="submit" id ="2">register</button>
+    
+</form>
+<script src="{{ url_for('static', filename='brain.js') }}"></script>
+</body>
+{% endblock %}
